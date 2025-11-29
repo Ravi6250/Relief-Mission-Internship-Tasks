@@ -1,0 +1,108 @@
+/* General Page Setup */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Dark Gaming Background */
+    background: linear-gradient(135deg, #2c3e50, #4ca1af); 
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Game Board Container */
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    backdrop-filter: blur(5px);
+}
+
+/* Individual Cells */
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3.5rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    color: #333;
+}
+
+/* Hover Effect */
+.cell:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* Colors for X and O (Added dynamically via JS logic conceptually, 
+   but here we set base colors. 
+   If you want specific colors, JS needs to add classes, 
+   but standard text color works too) */
+.cell[data-player="X"] { color: #ff5722; } /* Example logic if you add attribute */
+.cell[data-player="O"] { color: #2196f3; }
+
+/* Status Text */
+#status {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: 500;
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* Restart Button */
+button {
+    margin-top: 25px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+    background: #ff6b6b;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+    transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+    background: #ff4757;
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 400px) {
+    .cell {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+}

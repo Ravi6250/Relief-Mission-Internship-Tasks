@@ -1,0 +1,89 @@
+/* Page Setup */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Purple-Blue gradient background to match theme */
+    background: linear-gradient(135deg, #4b0082, #1e90ff);
+}
+
+/* Main Container */
+.stopwatch-container {
+    background-color: #ffffff;
+    width: 350px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+/* Time Display */
+#display {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 25px;
+    background: #f4f4f4;
+    padding: 15px;
+    border-radius: 10px;
+    /* Keeps numbers fixed width so they don't jitter */
+    font-variant-numeric: tabular-nums; 
+}
+
+/* Buttons Container */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* General Button Styles */
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Individual Button Colors */
+button:nth-child(1) { background-color: #28a745; } /* Start - Green */
+button:nth-child(2) { background-color: #ffc107; color: #000; } /* Pause - Yellow */
+button:nth-child(3) { background-color: #dc3545; } /* Reset - Red */
+button:nth-child(4) { background-color: #17a2b8; } /* Lap - Cyan */
+
+/* Laps Section */
+#laps {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    max-height: 150px;
+    overflow-y: auto; /* Scrollbar if list gets long */
+    border-top: 2px solid #eee;
+}
+
+#laps li {
+    background: #fafafa;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+    color: #555;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
