@@ -1,6 +1,7 @@
 # Web Development Internship Tasks - Relief Mission Foundation
 
-This repository contains the tasks completed for the Web Development Track (Code: WD).
+This repository contains the tasks completed for the Relief Mission Foundation Internship.
+.
 
 ## Task List
 
@@ -32,3 +33,4 @@ This repository contains the tasks completed for the Web Development Track (Code
   - Hero Section with Parallax effect.
   - Donation Causes with Progress Bars.
   - Mobile Responsive Navigation.
+
